@@ -7620,6 +7620,27 @@
                         "endOffset": 3537
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 523,
+                    "startColumn": 4,
+                    "startOffset": 34483,
+                    "endLine": 526,
+                    "endColumn": 12,
+                    "endOffset": 34674
+                },
+                "from": {
+                    "file": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 171,
+                        "startColumn": 4,
+                        "startOffset": 7327,
+                        "endLine": 174,
+                        "endColumn": 12,
+                        "endOffset": 7518
+                    }
+                }
             }
         ]
     }

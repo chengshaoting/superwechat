@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86,armeabi-v7a"
-    api-level="19"
+    abi="x86"
+    api-level="23"
+    density="420dpi"
     format="7"
-    timestamp="27261697537133" >
+    timestamp="349097988078" >
 
     <task
         name="javac"
-        duration="2977" />
+        duration="10500" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="2774" />
+        duration="4516" />
     <task
         name="verifier"
-        duration="1310" />
+        duration="1301" />
 
     <artifact
         location="C:\Users\sks\AndroidStudioProjects\superwechat\build\outputs\apk\superwechat-debug.apk"
         type="MAIN" />
 
-    <build timestamp="27261697537133" >
+    <build timestamp="349097988078" >
         <artifact
             location="C:\Users\sks\AndroidStudioProjects\superwechat\build\outputs\apk\superwechat-debug.apk"
             type="MAIN" />
