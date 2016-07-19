@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.easemob.applib.controller;
+package cn.ucai.superwechat.applib.controller;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -28,10 +28,10 @@ import com.easemob.EMCallBack;
 import com.easemob.EMConnectionListener;
 import com.easemob.EMError;
 import com.easemob.EMValueCallBack;
-import com.easemob.applib.model.DefaultHXSDKModel;
-import com.easemob.applib.model.HXNotifier;
-import com.easemob.applib.model.HXNotifier.HXNotificationInfoProvider;
-import com.easemob.applib.model.HXSDKModel;
+import cn.ucai.superwechat.applib.model.DefaultHXSDKModel;
+import cn.ucai.superwechat.applib.model.HXNotifier;
+import cn.ucai.superwechat.applib.model.HXNotifier.HXNotificationInfoProvider;
+import cn.ucai.superwechat.applib.model.HXSDKModel;
 import com.easemob.chat.EMChat;
 import com.easemob.chat.EMChatConfig.EMEnvMode;
 import com.easemob.chat.EMChatManager;
@@ -39,6 +39,8 @@ import com.easemob.chat.EMChatOptions;
 import com.easemob.chat.EMContactManager;
 import com.easemob.chat.EMGroupManager;
 import com.easemob.exceptions.EaseMobException;
+
+import cn.ucai.superwechat.applib.model.HXSDKModel;
 
 /**
  * The developer can derive from this class to talk with HuanXin SDK

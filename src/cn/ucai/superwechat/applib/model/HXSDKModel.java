@@ -11,9 +11,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.easemob.applib.model;
+package cn.ucai.superwechat.applib.model;
 
-import com.easemob.applib.utils.HXPreferenceUtils;
+import cn.ucai.superwechat.applib.utils.HXPreferenceUtils;
 
 /**
  * HX SDK app model which will manage the user data and preferences

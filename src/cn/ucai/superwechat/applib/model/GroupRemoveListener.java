@@ -1,4 +1,4 @@
-package com.easemob.applib.model;
+package cn.ucai.superwechat.applib.model;
 
 import com.easemob.EMGroupChangeListener;
 
