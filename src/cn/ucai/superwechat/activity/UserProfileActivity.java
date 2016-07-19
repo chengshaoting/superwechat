@@ -23,7 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.easemob.EMValueCallBack;
-import com.easemob.applib.controller.HXSDKHelper;
+import cn.ucai.superwechat.applib.controller.HXSDKHelper;
 import com.easemob.chat.EMChatManager;
 import cn.ucai.superwechat.DemoHXSDKHelper;
 import cn.ucai.superwechat.R;
@@ -99,7 +99,7 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 			break;
 		case R.id.rl_nickname:
 			final EditText editText = new EditText(this);
-			new AlertDialog.Builder(this).setTitle(R.string.setting_nickname).setIcon(android.R.drawable.ic_dialog_info).setView(editText)
+			new Builder(this).setTitle(R.string.setting_nickname).setIcon(android.R.drawable.ic_dialog_info).setView(editText)
 					.setPositiveButton(R.string.dl_ok, new DialogInterface.OnClickListener() {
 
 						@Override
@@ -144,7 +144,7 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 	
 	
 	private void uploadHeadPhoto() {
-		AlertDialog.Builder builder = new Builder(this);
+		Builder builder = new Builder(this);
 		builder.setTitle(R.string.dl_title_upload_photo);
 		builder.setItems(new String[] { getString(R.string.dl_msg_take_photo), getString(R.string.dl_msg_local_upload) },
 				new DialogInterface.OnClickListener() {

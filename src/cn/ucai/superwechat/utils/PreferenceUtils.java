@@ -13,10 +13,9 @@
  */
 package cn.ucai.superwechat.utils;
 
-import com.easemob.applib.utils.HXPreferenceUtils;
+import cn.ucai.superwechat.applib.utils.HXPreferenceUtils;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 
 /**
  * 

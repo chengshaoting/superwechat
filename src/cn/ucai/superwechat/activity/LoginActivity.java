@@ -32,7 +32,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.easemob.EMCallBack;
-import com.easemob.applib.controller.HXSDKHelper;
+import cn.ucai.superwechat.applib.controller.HXSDKHelper;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
 import cn.ucai.superwechat.Constant;

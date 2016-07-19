@@ -5,9 +5,8 @@ import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.easemob.applib.controller.HXSDKHelper;
+import cn.ucai.superwechat.applib.controller.HXSDKHelper;
 import cn.ucai.superwechat.DemoHXSDKHelper;
-import cn.ucai.superwechat.UserProfileManager;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.domain.User;
 import com.squareup.picasso.Picasso;

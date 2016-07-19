@@ -35,7 +35,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.easemob.applib.controller.HXSDKHelper;
+import cn.ucai.superwechat.applib.controller.HXSDKHelper;
 import com.easemob.chat.EMCallStateChangeListener;
 import com.easemob.chat.EMChatManager;
 import cn.ucai.superwechat.R;

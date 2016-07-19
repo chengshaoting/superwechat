@@ -19,7 +19,6 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 
 import cn.ucai.superwechat.applib.controller.HXSDKHelper;
-import cn.ucai.superwechat.applib.model.HXNotifier;
 import com.umeng.analytics.MobclickAgent;
 
 public class BaseActivity extends FragmentActivity {

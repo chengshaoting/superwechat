@@ -17,12 +17,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import android.R.bool;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.easemob.EMCallBack;
 import com.easemob.EMConnectionListener;
@@ -39,8 +37,6 @@ import com.easemob.chat.EMChatOptions;
 import com.easemob.chat.EMContactManager;
 import com.easemob.chat.EMGroupManager;
 import com.easemob.exceptions.EaseMobException;
-
-import cn.ucai.superwechat.applib.model.HXSDKModel;
 
 /**
  * The developer can derive from this class to talk with HuanXin SDK

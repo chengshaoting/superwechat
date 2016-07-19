@@ -7,9 +7,7 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import com.easemob.EMValueCallBack;
-import com.easemob.applib.utils.HXPreferenceUtils;
 import com.easemob.chat.EMChatManager;
-import cn.ucai.superwechat.Constant;
 import cn.ucai.superwechat.domain.User;
 import cn.ucai.superwechat.utils.UserUtils;
 import com.easemob.util.EMLog;

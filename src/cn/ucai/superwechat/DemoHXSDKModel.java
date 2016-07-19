@@ -18,7 +18,7 @@ import java.util.Map;
 
 import android.content.Context;
 
-import com.easemob.applib.model.DefaultHXSDKModel;
+import cn.ucai.superwechat.applib.model.DefaultHXSDKModel;
 import cn.ucai.superwechat.db.DemoDBManager;
 import cn.ucai.superwechat.db.UserDao;
 import cn.ucai.superwechat.domain.RobotUser;

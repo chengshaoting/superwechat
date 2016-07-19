@@ -13,8 +13,6 @@
  */
 package cn.ucai.superwechat.applib.model;
 
-import cn.ucai.superwechat.applib.utils.HXPreferenceUtils;
-
 /**
  * HX SDK app model which will manage the user data and preferences
  * @author easemob

@@ -19,7 +19,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
-import com.easemob.applib.controller.HXSDKHelper;
+import cn.ucai.superwechat.applib.controller.HXSDKHelper;
 import cn.ucai.superwechat.Constant;
 import cn.ucai.superwechat.DemoHXSDKHelper;
 import cn.ucai.superwechat.R;
