@@ -81,6 +81,7 @@ public interface I {
 	String AVATAR_SUFFIX_PNG						=		".png";							//PNG图片后缀名
 	String QUESTION                                 =       "?";                            //
 	String AVATAR_SUFFIX_JPG						=		".jpg";							//JPG图片后缀名
+	String EQU                                      =       "=";
 	int LOCATION_IS_SEARCH_ALLOW					=		1;								//可以被搜索到地理位置
 	int LOCATION_IS_SEARCH_INHIBIT					=		0;								//禁止被搜索到地理位置
 	int MSG_SUCCESS						            =  		0;							    //默认成功
