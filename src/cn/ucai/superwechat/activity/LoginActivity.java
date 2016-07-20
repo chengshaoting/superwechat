@@ -19,9 +19,12 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.ProgressDialog;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -35,6 +38,7 @@ import com.easemob.EMCallBack;
 
 import cn.ucai.superwechat.I;
 import cn.ucai.superwechat.OkHttpUtils2;
+import cn.ucai.superwechat.Utils;
 import cn.ucai.superwechat.applib.controller.HXSDKHelper;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
@@ -43,6 +47,7 @@ import cn.ucai.superwechat.SuperWeChatApplication;
 import cn.ucai.superwechat.DemoHXSDKHelper;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.bean.Result;
+import cn.ucai.superwechat.bean.UserAvatar;
 import cn.ucai.superwechat.db.UserDao;
 import cn.ucai.superwechat.domain.User;
 import cn.ucai.superwechat.utils.CommonUtils;
@@ -190,10 +195,13 @@ public class LoginActivity extends BaseActivity {
 					public void onSuccess(Result result) {
 						Log.e(TAG,"result="+result);
 						if(result!=null&&result.isRetMsg()){
+							UserAvatar user = (UserAvatar) result.getRetData();
+							Log.e(TAG,"user="+user);
+							saveUserToDB(user);
 							loginSuccess();
 						}else {
 							pd.dismiss();
-							Toast.makeText(getApplicationContext(), R.string.Login_failed+result.getRetCode(), Toast.LENGTH_LONG).show();
+							Toast.makeText(getApplicationContext(), R.string.Login_failed+ Utils.getResourceString(LoginActivity.this,result.getRetCode()), Toast.LENGTH_LONG).show();
 						}
 					}
 
@@ -206,6 +214,12 @@ public class LoginActivity extends BaseActivity {
 
 					}
 				});
+
+	}
+
+	private void saveUserToDB(UserAvatar user) {
+		UserDao dao = new UserDao(LoginActivity.this);
+		dao.saveUserAvatar(user);
 
 	}
 
@@ -250,6 +264,7 @@ public class LoginActivity extends BaseActivity {
 
 	}
 
+
 	private void initializeContacts() {
 		Map<String, User> userlist = new HashMap<String, User>();
 		// 添加user"申请与通知"
@@ -292,6 +307,7 @@ public class LoginActivity extends BaseActivity {
 	public void register(View view) {
 		startActivityForResult(new Intent(this, RegisterActivity.class), 0);
 	}
+
 
 	@Override
 	protected void onResume() {
