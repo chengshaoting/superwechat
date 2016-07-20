@@ -50,6 +50,7 @@ import cn.ucai.superwechat.bean.Result;
 import cn.ucai.superwechat.bean.UserAvatar;
 import cn.ucai.superwechat.db.UserDao;
 import cn.ucai.superwechat.domain.User;
+import cn.ucai.superwechat.task.DownloadContactListTask;
 import cn.ucai.superwechat.utils.CommonUtils;
 
 /**
@@ -185,23 +186,30 @@ public class LoginActivity extends BaseActivity {
 
 
 	private void loginAppSever(){
-		final OkHttpUtils2<Result> utils2 = new OkHttpUtils2<Result>();
+		final OkHttpUtils2<String> utils2 = new OkHttpUtils2<String>();
 		utils2.setRequestUrl(I.REQUEST_LOGIN)
 				.addParam(I.User.USER_NAME,currentUsername)
 				.addParam(I.User.PASSWORD,currentPassword)
-				.targetClass(Result.class)
-				.execute(new OkHttpUtils2.OnCompleteListener<Result>() {
+				.targetClass(String.class)
+				.execute(new OkHttpUtils2.OnCompleteListener<String>() {
 					@Override
-					public void onSuccess(Result result) {
+					public void onSuccess(String s) {
+						Log.e(TAG,"s="+s);
+
+						Result result = Utils.getResultFromJson(s, UserAvatar.class);
 						Log.e(TAG,"result="+result);
 						if(result!=null&&result.isRetMsg()){
 							UserAvatar user = (UserAvatar) result.getRetData();
 							Log.e(TAG,"user="+user);
-							saveUserToDB(user);
-							loginSuccess();
+							if (user != null) {
+								saveUserToDB(user);
+								loginSuccess(user);
+							}
 						}else {
 							pd.dismiss();
-							Toast.makeText(getApplicationContext(), R.string.Login_failed+ Utils.getResourceString(LoginActivity.this,result.getRetCode()), Toast.LENGTH_LONG).show();
+							Toast.makeText(getApplicationContext(),
+									R.string.Login_failed+ Utils.getResourceString(LoginActivity.this,result.getRetCode()),
+									Toast.LENGTH_LONG).show();
 						}
 					}
 
@@ -223,10 +231,13 @@ public class LoginActivity extends BaseActivity {
 
 	}
 
-	private void loginSuccess() {
+	private void loginSuccess(UserAvatar user) {
 		SuperWeChatApplication.getInstance().setUserName(currentUsername);
 		SuperWeChatApplication.getInstance().setPassword(currentPassword);
+		SuperWeChatApplication.getInstance().setUser(user);
+		SuperWeChatApplication.currentUserNick = user.getMUserNick();
 
+		new DownloadContactListTask(LoginActivity.this,currentUsername).excute();
 		try {
 			// ** 第一次登录或者之前logout后再登录，加载所有本地群和回话
 			// ** manually load all local groups and

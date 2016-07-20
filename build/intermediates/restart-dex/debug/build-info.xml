@@ -4,21 +4,34 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="5702841670683" >
+    timestamp="35582985965668" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="3781" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="33" />
     <task
         name="verifier"
-        duration="0" />
+        duration="8" />
 
-    <build timestamp="5702841670683" />
+    <artifact
+        location="C:\Users\sks\AndroidStudioProjects\superwechat\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+        type="DEX" />
+
+    <build timestamp="35264707547963" >
+        <artifact
+            location="C:\Users\sks\AndroidStudioProjects\superwechat\build\outputs\apk\superwechat-debug.apk"
+            type="MAIN" />
+    </build>
+    <build timestamp="35582985965668" >
+        <artifact
+            location="C:\Users\sks\AndroidStudioProjects\superwechat\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
+    </build>
 
 </instant-run>
