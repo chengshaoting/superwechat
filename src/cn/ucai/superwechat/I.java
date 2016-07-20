@@ -74,7 +74,7 @@ public interface I {
 	int AVATAR_TYPE_GROUP							=		1;								//群组头像
 	int GROUP_PUBLIC								=		1;								//公开群组
 	int GROUP_NO_PUBLIC								=		0;								//非公开群组
-	String SERVER_ROOT                              =       "http://localhost:9999/SuperWeChatServer/Server";
+	String SERVER_ROOT                              =       "http://192.168.1.157:9999/SuperWeChatServer/Server";
 	String BACKSLASH								= 		"/";							//反斜杠
 	String AVATAR_TYPE_USER_PATH					= 		"user_avatar";					//用户头像保存目录
 	String AVATAR_TYPE_GROUP_PATH 					=		"group_icon";					//群组头像保存目录
