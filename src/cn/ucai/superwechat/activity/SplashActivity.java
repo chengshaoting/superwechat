@@ -26,6 +26,7 @@ public class SplashActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle arg0) {
+
 		setContentView(R.layout.activity_splash);
 		super.onCreate(arg0);
 

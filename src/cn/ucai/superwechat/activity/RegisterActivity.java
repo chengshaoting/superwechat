@@ -162,6 +162,7 @@ public class RegisterActivity extends BaseActivity {
 				.addParam(I.User.USER_NAME,username)
 				.addParam(I.User.PASSWORD,pwd)
 				.addParam(I.User.NICK,nick)
+				.addFile(file)
 				.targetClass(Result.class)
 				.execute(new OkHttpUtils2.OnCompleteListener<Result>() {
 					@Override
