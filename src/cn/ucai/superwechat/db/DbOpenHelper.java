@@ -46,12 +46,19 @@ public class DbOpenHelper extends SQLiteOpenHelper{
 			+ UserDao.ROBOT_COLUMN_NAME_ID + " TEXT PRIMARY KEY, "
 			+ UserDao.ROBOT_COLUMN_NAME_NICK + " TEXT, "
 			+ UserDao.ROBOT_COLUMN_NAME_AVATAR + " TEXT);";
-			
+
 	private static final String CREATE_PREF_TABLE = "CREATE TABLE "
             + UserDao.PREF_TABLE_NAME + " ("
             + UserDao.COLUMN_NAME_DISABLED_GROUPS + " TEXT, "
             + UserDao.COLUMN_NAME_DISABLED_IDS + " TEXT);";
-	
+	private static final String SUPERWECHAT_USER_TABLE_CREATE = "CREATE TABLE "
+			+ UserDao.USER_TABLE_NAME+ " ("
+			+ UserDao.USER_COLUMN_NAME_ID + " TEXT PRIMRY KEY,"
+			+ UserDao.USER_COLUMN_NAME_NICK + " TEXT,"
+			+ UserDao.USER_COLUMN_NAME_AVATAR + "INTEGER, "
+			+ UserDao.USER_COLUMN_AVATAR_TYPE+ " INTEGER,"
+			+ UserDao.USER_COLUMN_AVATAR_PATH + " TEXT, "
+			+ UserDao.USER_COLUMN_AVATAR_LAST_UPDATE_TIME+ " TEXT);";
 	private DbOpenHelper(Context context) {
 		super(context, getUserDatabaseName(), null, DATABASE_VERSION);
 	}
