@@ -124,9 +124,10 @@ public class ContactAdapter extends ArrayAdapter<User>  implements SectionIndexe
 			holder.nameTextview.setText(user.getNick());
 			holder.avatar.setImageResource(R.drawable.groups_icon);
 		}else{
-		    holder.nameTextview.setText(user.getNick());
+		    //holder.nameTextview.setText(user.getNick());
 		    //设置用户头像
-			UserUtils.setAppUserAvatar(getContext(), username, holder.avatar);
+			UserUtils.setAppUserNick(username,holder.nameTextview);
+			UserUtils.setAppUserAvatar(getContext(),username,holder.avatar);
 			if(holder.unreadMsgView != null)
 			    holder.unreadMsgView.setVisibility(View.INVISIBLE);
 		}
@@ -197,8 +198,9 @@ public class ContactAdapter extends ArrayAdapter<User>  implements SectionIndexe
 			if(mOriginalList==null){
 			    mOriginalList = new ArrayList<User>();
 			}
-			EMLog.d(TAG, "contacts original size: " + mOriginalList.size());
-			EMLog.d(TAG, "contacts copy size: " + copyUserList.size());
+			Log.e(TAG, "contacts original size: " + mOriginalList.size());
+			Log.e(TAG, "contacts copy size: " + copyUserList.size());
+			Log.e(TAG,"prefix="+prefix);
 			
 			if(prefix==null || prefix.length()==0){
 				results.values = copyUserList;
@@ -210,10 +212,11 @@ public class ContactAdapter extends ArrayAdapter<User>  implements SectionIndexe
 				for(int i=0;i<count;i++){
 					final User user = mOriginalList.get(i);
 					String username = user.getUsername();
-					
-					if(username.startsWith(prefixString)){
-						newValues.add(user);
-					}
+						if(username.contains(prefixString)){
+							if(!username.equals(Constant.GROUP_USERNAME)&&!username.equals(Constant.NEW_FRIENDS_USERNAME))
+							newValues.add(user);
+						}
+
 					else{
 						 final String[] words = username.split(" ");
 	                     final int wordCount = words.length;
@@ -249,8 +252,6 @@ public class ContactAdapter extends ArrayAdapter<User>  implements SectionIndexe
 			}
 		}
 	}
-	
-	
 	@Override
 	public void notifyDataSetChanged() {
 	    super.notifyDataSetChanged();
