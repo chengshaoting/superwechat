@@ -44,12 +44,12 @@
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-nodpi\\find_erweima.png"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_fujin.png",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-nodpi\\find_fujin.png"
-    },
-    {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_gouwu.png",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-nodpi\\find_gouwu.png"
+    },
+    {
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_fujin.png",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-nodpi\\find_fujin.png"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\mobile.png",

@@ -33,6 +33,8 @@ import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMConversation;
 import cn.ucai.superwechat.Constant;
 import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.Utils;
+import cn.ucai.superwechat.bean.UserAvatar;
 import cn.ucai.superwechat.domain.User;
 import cn.ucai.superwechat.utils.UserUtils;
 import cn.ucai.superwechat.widget.Sidebar;
@@ -89,7 +91,6 @@ public class ContactAdapter extends ArrayAdapter<User>  implements SectionIndexe
 			Log.d("ContactAdapter", position + "");
 		//设置nick，demo里不涉及到完整user，用username代替nick显示
 		String username = user.getUsername();
-		Log.e(TAG,"username="+username);
 		String header = user.getHeader();
 		if (position == 0 || header != null && !header.equals(getItem(position - 1).getHeader())) {
 			if (TextUtils.isEmpty(header)) {
@@ -124,11 +125,14 @@ public class ContactAdapter extends ArrayAdapter<User>  implements SectionIndexe
 			holder.nameTextview.setText(user.getNick());
 			holder.avatar.setImageResource(R.drawable.groups_icon);
 		}else{
-		    //holder.nameTextview.setText(user.getNick());
-		    //设置用户头像
-			UserUtils.setAppUserNick(username,holder.nameTextview);
-			UserUtils.setAppUserAvatar(getContext(),username,holder.avatar);
+			//设置用户昵称
+//		    holder.nameTextview.setText(user.getNick());
+			UserUtils.setAppUserNick(username, holder.nameTextview);
+			//设置用户头像
+//			UserUtils.setUserAvatar(getContext(), username, holder.avatar);
+			UserUtils.setAppUserAvatar(getContext(), username, holder.avatar);
 			if(holder.unreadMsgView != null)
+
 			    holder.unreadMsgView.setVisibility(View.INVISIBLE);
 		}
 		
@@ -200,8 +204,8 @@ public class ContactAdapter extends ArrayAdapter<User>  implements SectionIndexe
 			}
 			Log.e(TAG, "contacts original size: " + mOriginalList.size());
 			Log.e(TAG, "contacts copy size: " + copyUserList.size());
-			Log.e(TAG,"prefix="+prefix);
-			
+			Log.e(TAG, "prefix=" + prefix);
+
 			if(prefix==null || prefix.length()==0){
 				results.values = copyUserList;
 				results.count = copyUserList.size();
@@ -212,11 +216,13 @@ public class ContactAdapter extends ArrayAdapter<User>  implements SectionIndexe
 				for(int i=0;i<count;i++){
 					final User user = mOriginalList.get(i);
 					String username = user.getUsername();
-						if(username.contains(prefixString)){
-							if(!username.equals(Constant.GROUP_USERNAME)&&!username.equals(Constant.NEW_FRIENDS_USERNAME))
+//					String usernick = user.getNick();
+//					Log.e(TAG,"usernick=" + usernick);
+					if(username.contains(prefixString)){
+						if(!username.equals(Constant.GROUP_USERNAME)&&!username.equals(Constant.NEW_FRIENDS_USERNAME)){
 							newValues.add(user);
 						}
-
+					}
 					else{
 						 final String[] words = username.split(" ");
 	                     final int wordCount = words.length;
@@ -252,6 +258,8 @@ public class ContactAdapter extends ArrayAdapter<User>  implements SectionIndexe
 			}
 		}
 	}
+	
+	
 	@Override
 	public void notifyDataSetChanged() {
 	    super.notifyDataSetChanged();

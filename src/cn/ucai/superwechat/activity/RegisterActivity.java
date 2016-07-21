@@ -27,9 +27,9 @@ import android.widget.Toast;
 import com.easemob.EMError;
 import com.easemob.chat.EMChatManager;
 
-import cn.ucai.superwechat.OkHttpUtils2;
 import cn.ucai.superwechat.SuperWeChatApplication;
 import cn.ucai.superwechat.I;
+import cn.ucai.superwechat.data.OkHttpUtils2;
 import cn.ucai.superwechat.Listener.OnSetAvatarListener;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.bean.Result;
@@ -97,12 +97,13 @@ public class RegisterActivity extends BaseActivity {
 	}
 
 	private String getAvaterName() {
-
 		avatarName=String.valueOf(System.currentTimeMillis());
 		return avatarName;
+
 	}
 
 	private void initView() {
+
 		userNameEditText = (EditText) findViewById(R.id.username);
 		passwordEditText = (EditText) findViewById(R.id.password);
 		confirmPwdEditText = (EditText) findViewById(R.id.confirm_password);
@@ -228,20 +229,19 @@ public class RegisterActivity extends BaseActivity {
 	}
 
 	private void unRegisterAppServer() {
-		OkHttpUtils2<Result> utils2 = new OkHttpUtils2<Result>();
+		final OkHttpUtils2<Result> utils2 = new OkHttpUtils2<Result>();
 		utils2.setRequestUrl(I.REQUEST_UNREGISTER)
 				.addParam(I.User.USER_NAME,username)
 				.targetClass(Result.class)
 				.execute(new OkHttpUtils2.OnCompleteListener<Result>() {
 					@Override
 					public void onSuccess(Result result) {
-						Log.e(TAG,"result="+result);
+						Log.e(TAG, "result=" + result);
 					}
 
 					@Override
 					public void onError(String error) {
-						Log.e(TAG,"error="+error);
-
+						Log.e(TAG, "error=" + error);
 					}
 				});
 	}

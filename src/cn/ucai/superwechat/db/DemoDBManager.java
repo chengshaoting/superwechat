@@ -348,27 +348,27 @@ public class DemoDBManager {
 	}
     synchronized public void saveUserAvatar(UserAvatar user) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-        ContentValues valus = new ContentValues();
-        valus.put(UserDao.USER_COLUMN_NAME_ID,user.getMUserName());
-        valus.put(UserDao.USER_COLUMN_AVATAR_LAST_UPDATE_TIME,user.getMAvatarLastUpdateTime());
-        valus.put(UserDao.USER_COLUMN_NAME_NICK,user.getMUserNick());
-        valus.put(UserDao.USER_COLUMN_NAME_AVATAR,user.getMAvatarId());
-        valus.put(UserDao.USER_COLUMN_AVATAR_TYPE,user.getMAvatarType());
-        valus.put(UserDao.USER_COLUMN_AVATAR_PATH,user.getMAvatarPath());
-
+        ContentValues values = new ContentValues();
+        values.put(UserDao.USER_COLUMN_NAME_ID,user.getMUserName());
+        values.put(UserDao.USER_COLUMN_AVATAR_LAST_UPDATE_TIME,user.getMAvatarLastUpdateTime());
+        values.put(UserDao.USER_COLUMN_AVATAR_PATH,user.getMAvatarPath());
+        values.put(UserDao.USER_COLUMN_AVATAR_TYPE,user.getMAvatarType());
+        values.put(UserDao.USER_COLUMN_NAME_NICK,user.getMUserNick());
+        values.put(UserDao.USER_COLUMN_NAME_AVATAR,user.getMAvatarId());
         if (db.isOpen()) {
-                db.replace(UserDao.USER_TABLE_NAME, null, valus);
-            }
+            db.replace(UserDao.USER_TABLE_NAME, null, values);
         }
+    }
 
-   synchronized public UserAvatar getUserAvatar(String username) {
+
+    synchronized public UserAvatar getUserAvatar(String userName) {
         UserAvatar user =null;
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from " + UserDao.USER_TABLE_NAME+
-                " where "+UserDao.USER_COLUMN_NAME_ID+ "=?",new String[]{username});
+                " where "+UserDao.USER_COLUMN_NAME_ID+ "=?",new String[]{userName});
         if (cursor.moveToNext()) {
             user = new UserAvatar();
-            user.setMUserName(username);
+            user.setMUserName(userName);
             user.setMAvatarId(cursor.getInt(cursor.getColumnIndex(UserDao.USER_COLUMN_NAME_AVATAR)));
             user.setMAvatarLastUpdateTime(cursor.getString(cursor.getColumnIndex(UserDao.USER_COLUMN_AVATAR_LAST_UPDATE_TIME)));
             user.setMAvatarPath(cursor.getString(cursor.getColumnIndex(UserDao.USER_COLUMN_AVATAR_PATH)));
@@ -377,9 +377,5 @@ public class DemoDBManager {
             return user;
         }
         return user;
-
     }
 }
-    
-
-    

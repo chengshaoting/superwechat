@@ -14,6 +14,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -23,16 +24,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.easemob.EMValueCallBack;
+
+import cn.ucai.superwechat.SuperWeChatApplication;
 import cn.ucai.superwechat.applib.controller.HXSDKHelper;
 import com.easemob.chat.EMChatManager;
 import cn.ucai.superwechat.DemoHXSDKHelper;
 import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.bean.UserAvatar;
+import cn.ucai.superwechat.db.UserDao;
 import cn.ucai.superwechat.domain.User;
 import cn.ucai.superwechat.utils.UserUtils;
 import com.squareup.picasso.Picasso;
 
 public class UserProfileActivity extends BaseActivity implements OnClickListener{
-	
+	private static final String TAG = UserProfileActivity.class.getSimpleName();
 	private static final int REQUESTCODE_PICK = 1;
 	private static final int REQUESTCODE_CUTTING = 2;
 	private ImageView headAvatar;
@@ -65,13 +70,24 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 	private void initListener() {
 		Intent intent = getIntent();
 		String username = intent.getStringExtra("username");
-		boolean enableUpdate = intent.getBooleanExtra("setting", false);
-		if (enableUpdate) {
-			headPhotoUpdate.setVisibility(View.VISIBLE);
-			iconRightArrow.setVisibility(View.VISIBLE);
-			rlNickName.setOnClickListener(this);
-			headAvatar.setOnClickListener(this);
-		} else {
+//		boolean enableUpdate = intent.getBooleanExtra("setting", false);
+		Intent intent2 = new Intent();
+		Boolean setting = intent2.getBooleanExtra("setting",true);
+		if(setting){
+			UserAvatar user = SuperWeChatApplication.getInstance().getUser();
+			UserUtils.setAppUserAvatar(this,user.getMUserName(),headAvatar);
+			Log.e(TAG, "ksdfsdfdsfsd=" + user.toString());
+			tvNickName.setText(user.getMUserNick());
+		}
+//		if (enableUpdate) {
+//			headPhotoUpdate.setVisibility(View.VISIBLE);
+//			iconRightArrow.setVisibility(View.VISIBLE);
+//			rlNickName.setOnClickListener(this);
+//			headAvatar.setOnClickListener(this);
+//
+//
+//		}
+	else {
 			headPhotoUpdate.setVisibility(View.GONE);
 			iconRightArrow.setVisibility(View.INVISIBLE);
 		}
@@ -85,9 +101,11 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 			UserUtils.setCurrentUserAvatar(this, headAvatar);
 		} else {
 			tvUsername.setText(username);
-			UserUtils.setUserNick(username, tvNickName);
-			UserUtils.setUserAvatar(this, username, headAvatar);
-			asyncFetchUserInfo(username);
+//			UserUtils.setUserNick(username, tvNickName);
+//			UserUtils.setUserAvatar(this, username, headAvatar);
+			UserUtils.setAppUserNick(username,tvNickName);
+			UserUtils.setAppUserAvatar(this,username,headAvatar);
+//			asyncFetchUserInfo(username);
 		}
 	}
 

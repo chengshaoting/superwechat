@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     android:background="#eff2f6"
     android:orientation="vertical"
-    >
-
+    android:id="@+id/layoutRegister">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dip"
@@ -14,12 +13,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/mobile"
             android:text="超级微信"
             android:gravity="center_vertical"
-            android:textColor="#000"
             android:textSize="30dp"
-            android:drawableLeft="@drawable/mobile" />
+            android:textColor="#000"
+            android:layout_centerInParent="true"
+            />
     </RelativeLayout>
 
     <LinearLayout
@@ -62,8 +62,8 @@
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
             android:background="#fff" >
 
             <ImageView
@@ -201,9 +201,8 @@
                 android:paddingBottom="7dp"
                 android:paddingTop="7dp"
                 android:text="@string/login"
-                android:textColor="@android:color/black"
+                android:textColor="#000"
                 android:textSize="20sp" />
-
             <Button
                 android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
@@ -213,7 +212,6 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_login_bg"
-                android:onClick="register"
                 android:paddingBottom="7dp"
                 android:paddingTop="7dp"
                 android:text="@string/register"

@@ -17,21 +17,21 @@ import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatApplication;
 import cn.ucai.superwechat.bean.UserAvatar;
 import cn.ucai.superwechat.db.UserDao;
+import cn.ucai.superwechat.task.DownloadContactListTask;
 
 /**
  * 开屏页
  *
  */
 public class SplashActivity extends BaseActivity {
+	private static final String TAG = SplashActivity.class.getSimpleName();
 	private RelativeLayout rootLayout;
 	private TextView versionText;
 	
 	private static final int sleepTime = 2000;
-	private static final String TAG = SplashActivity.class.getSimpleName();
 
 	@Override
 	protected void onCreate(Bundle arg0) {
-
 		setContentView(R.layout.activity_splash);
 		super.onCreate(arg0);
 
@@ -57,15 +57,15 @@ public class SplashActivity extends BaseActivity {
 					long start = System.currentTimeMillis();
 					EMGroupManager.getInstance().loadAllGroups();
 					EMChatManager.getInstance().loadAllConversations();
-//					String userName = SuperWeChatApplication.getInstance().getUserName();
-//					Log.e(TAG,"userName="+userName);
-//					UserDao dao = new UserDao(SplashActivity.this);
-//					UserAvatar user = dao.getUserAvatar(userName);
-//					Log.e(TAG,"user="+user);
-//					SuperWeChatApplication.getInstance().setUser(user);
-//					SuperWeChatApplication.currentUserNick = user.getMUserNick();
-
-
+					String userName = SuperWeChatApplication.getInstance().getUserName();
+					Log.e(TAG, "userName=" + userName);
+					UserDao dao = new UserDao(SplashActivity.this);
+					UserAvatar user = dao.getUserAvatar(userName);
+					Log.e(TAG, "user=" + user);
+					SuperWeChatApplication.getInstance().setUser(user);
+					SuperWeChatApplication.currentUserNick = user.getMUserNick();
+					new DownloadContactListTask(SplashActivity.this,userName).execute();
+//					闪屏
 
 					long costTime = System.currentTimeMillis() - start;
 					//等待sleeptime时长

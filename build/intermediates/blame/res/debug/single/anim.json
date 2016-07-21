@@ -32,20 +32,20 @@
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\slide_in_from_left.xml"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_out.xml",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\push_bottom_out.xml"
-    },
-    {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\head_out.xml",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\head_out.xml"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_in.xml",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\push_bottom_in.xml"
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_out.xml",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\push_bottom_out.xml"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\voice_from_icon.xml",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\voice_from_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_in.xml",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\push_bottom_in.xml"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\pop_exit.xml",
@@ -64,12 +64,12 @@
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\slide_in_from_right.xml"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\head_in.xml",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\head_in.xml"
-    },
-    {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\push_top_out.xml",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\push_top_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\head_in.xml",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\anim\\head_in.xml"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\push_top_out2.xml",

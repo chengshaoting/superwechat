@@ -24,12 +24,12 @@
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\chat_voice_call_normal.png"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chatting_biaoqing_btn_normal.png",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\chatting_biaoqing_btn_normal.png"
-    },
-    {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\contact_list_selected.png",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\contact_list_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chatting_biaoqing_btn_normal.png",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\chatting_biaoqing_btn_normal.png"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_voice_call_pressed.png",
@@ -72,20 +72,24 @@
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\app_panel_video_icon.9.png"
     },
     {
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\splash.png",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\splash.png"
+    },
+    {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\back.png",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\back.png"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\splash.png",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\splash.png"
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\to_group_details_normal.png",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\to_group_details_normal.png"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\groups_icon.png",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\groups_icon.png"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\to_group_details_normal.png",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\to_group_details_normal.png"
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_full_open_on_phone.png",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\drawable-xhdpi\\common_full_open_on_phone.png"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\settings_normal.png",
@@ -136,12 +140,12 @@
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\chat_send_btn_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_video_call_self.png",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\chat_video_call_self.png"
-    },
-    {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_mute_normal.png",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\icon_mute_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_video_call_self.png",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\chat_video_call_self.png"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\unread_count_bg.9.png",
@@ -180,12 +184,12 @@
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\splash_logo.png"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\contact_list_togroup.png",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\contact_list_togroup.png"
-    },
-    {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_mute_on.png",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\icon_mute_on.png"
+    },
+    {
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\contact_list_togroup.png",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\contact_list_togroup.png"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_speaker_normal.png",
@@ -200,12 +204,12 @@
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\chat_takepic_pressed.png"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_voice_call_self.png",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\chat_voice_call_self.png"
-    },
-    {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\settings_selected.png",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\settings_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_voice_call_self.png",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\chat_voice_call_self.png"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_video_mask_to.9.png",
@@ -216,12 +220,12 @@
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\mm_title_remove.png"
     },
     {
-        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\conversation_selected.png",
-        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\conversation_selected.png"
-    },
-    {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\add_public_group.png",
         "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\add_public_group.png"
+    },
+    {
+        "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\conversation_selected.png",
+        "source": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\res\\drawable-xhdpi\\conversation_selected.png"
     },
     {
         "merged": "C:\\Users\\sks\\AndroidStudioProjects\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_file_normal.png",

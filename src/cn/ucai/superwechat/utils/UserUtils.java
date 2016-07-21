@@ -16,7 +16,7 @@ import cn.ucai.superwechat.domain.User;
 import com.squareup.picasso.Picasso;
 
 public class UserUtils {
-	private static final String TAG = UserUtils.class.getSimpleName();
+    private static final String TAG = UserUtils.class.getSimpleName();
     /**
      * 根据username获取相应user，由于demo没有真实的用户数据，这里给的模拟的数据；
      * @param username
@@ -35,18 +35,6 @@ public class UserUtils {
         }
         return user;
     }
-	/**
-	 * 根据username获取相应useravatar;
-	 * @param username
-	 * @return
-	 */
-	public static UserAvatar getAppUserInfo(String username){
-		UserAvatar user = SuperWeChatApplication.getInstance().getUserMap().get(username);
-		if(user == null){
-			user = new UserAvatar(username);
-		}
-		return user;
-	}
     
     /**
      * 设置用户头像
@@ -60,30 +48,6 @@ public class UserUtils {
             Picasso.with(context).load(R.drawable.default_avatar).into(imageView);
         }
     }
-	/**
-	 * 设置用户头像
-	 * @param username
-	 */
-	public static void setAppUserAvatar(Context context, String username, ImageView imageView){
-		String path="";
-		if(path != null && username != null){
-			path = getUserAvatarPath(username);
-			Log.e(TAG,"path="+path);
-			Picasso.with(context).load(path).placeholder(R.drawable.default_avatar).into(imageView);
-		}else{
-			Picasso.with(context).load(R.drawable.default_avatar).into(imageView);
-		}
-	}
-	private static String getUserAvatarPath(String username){
-		StringBuilder path = new StringBuilder(I.SERVER_ROOT);
-		path.append(I.QUESTION).append(I.KEY_REQUEST)
-				.append(I.EQU).append(I.REQUEST_DOWNLOAD_AVATAR)
-				.append(I.AND)
-				.append(I.NAME_OR_HXID).append(I.EQU).append(username)
-				.append(I.AND)
-				.append(I.AVATAR_TYPE).append(I.EQU).append(I.AVATAR_TYPE_USER_PATH);
-                return path.toString();
-	}
     
     /**
      * 设置当前用户头像
@@ -108,21 +72,6 @@ public class UserUtils {
     		textView.setText(username);
     	}
     }
-	/**
-	 * 设置用户昵称
-	 */
-	public static void setAppUserNick(String username,TextView textView){
-		UserAvatar user = getAppUserInfo(username);
-		if(user != null){
-			if(user.getMUserNick()!=null){
-				textView.setText(user.getMUserNick());
-			}else {
-				textView.setText(username);
-			}
-		}else{
-			textView.setText(username);
-		}
-	}
     
     /**
      * 设置当前用户昵称
@@ -134,12 +83,54 @@ public class UserUtils {
     	}
     }
     
-
+    /**
+     * 保存或更新某个用户
+     */
 	public static void saveUserInfo(User newUser) {
 		if (newUser == null || newUser.getUsername() == null) {
 			return;
 		}
 		((DemoHXSDKHelper) HXSDKHelper.getInstance()).saveContact(newUser);
 	}
-    
+
+    public static void setAppUserAvatar(Context context, String username, ImageView avatar) {
+        String path = "";
+        if(path != null && username != null){
+            path = getUserAvatarPath(username);
+            Log.e(TAG, "path=" + path);
+            Picasso.with(context).load(path).placeholder(R.drawable.default_avatar).into(avatar);
+        }else{
+            Picasso.with(context).load(R.drawable.default_avatar).into(avatar);
+        }
+    }
+
+    private static String getUserAvatarPath(String username) {
+        StringBuilder path = new StringBuilder(I.SERVER_ROOT);
+        path.append(I.QUESTION).append(I.KEY_REQUEST)
+                .append(I.EQU).append(I.REQUEST_DOWNLOAD_AVATAR)
+                .append(I.AND)
+                .append(I.NAME_OR_HXID).append(I.EQU).append(username)
+                .append(I.AND)
+                .append(I.AVATAR_TYPE).append(I.EQU).append(I.AVATAR_TYPE_USER_PATH);
+        return path.toString();
+
+    }
+
+    public static void setAppUserNick(String username, TextView nameTextview) {
+        UserAvatar user = getAppUserInfo(username);
+        if(user != null){
+            nameTextview.setText(user.getMUserNick());
+        }else{
+            nameTextview.setText("默认名字");
+        }
+    }
+
+
+    private static UserAvatar getAppUserInfo(String username) {
+        UserAvatar user = SuperWeChatApplication.getInstance().getUserMap().get(username);
+        if(user == null){
+            user = new UserAvatar(username);
+        }
+        return user;
+    }
 }

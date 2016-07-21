@@ -306,7 +306,6 @@
     <string name="toast_updatephoto_success">更新头像成功!</string>
     <string name="toast_updatephoto_fail">更新头像失败!</string>
 
-
     <string name="msg_0">默认成功</string>
     <string name="msg_101">账号已经存在</string>
     <string name="msg_102">注册失败</string>
@@ -346,5 +345,4 @@
     <string name="msg_501">获取附近的人失败</string>
     <string name="msg_999">未知错误</string>
     <string name="msg_1">非法请求</string>
-
 </resources>

@@ -2,7 +2,7 @@ package cn.ucai.superwechat.bean;
 
 import java.io.Serializable;
 
-public class UserAvatar implements Serializable{
+public class UserAvatar implements Serializable {
 	private String muserName;
 //	private String muserPassword;
 	private String muserNick;
@@ -35,7 +35,6 @@ public class UserAvatar implements Serializable{
 	public UserAvatar(String username) {
 		this.muserName = username;
 	}
-
 
 	public String getMUserName() {
 		return muserName;

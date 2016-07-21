@@ -59,6 +59,7 @@ public interface I {
 	}
 
 //	String AVATAR_PATH 								= 		"E:/test/";
+	String MSG_PREFIX_MSG                           =       "msg_";
 	String ISON8859_1 								= 		"iso8859-1";
 	String UTF_8 									= 		"utf-8";
 	String PAGE_ID 									= 		"page_id";						//分页的起始下标
@@ -75,15 +76,14 @@ public interface I {
 	int GROUP_PUBLIC								=		1;								//公开群组
 	int GROUP_NO_PUBLIC								=		0;								//非公开群组
 	String SERVER_ROOT                              =       "http://192.168.1.157:9999/SuperWeChatServer/Server";
+	String EQU                                      =       "=";                            //等号
+	String AND                                      =       "&";                            //&符号
+	String QUESTION									=       "?";                            //问号
 	String BACKSLASH								= 		"/";							//反斜杠
 	String AVATAR_TYPE_USER_PATH					= 		"user_avatar";					//用户头像保存目录
 	String AVATAR_TYPE_GROUP_PATH 					=		"group_icon";					//群组头像保存目录
 	String AVATAR_SUFFIX_PNG						=		".png";							//PNG图片后缀名
-	String QUESTION                                 =       "?";                            //
 	String AVATAR_SUFFIX_JPG						=		".jpg";							//JPG图片后缀名
-	String EQU                                      =       "=";
-	String MSG_PREFIX_MSG                           =       "msg_";
-	String AND                                      =       "&";
 	int LOCATION_IS_SEARCH_ALLOW					=		1;								//可以被搜索到地理位置
 	int LOCATION_IS_SEARCH_INHIBIT					=		0;								//禁止被搜索到地理位置
 	int MSG_SUCCESS						            =  		0;							    //默认成功

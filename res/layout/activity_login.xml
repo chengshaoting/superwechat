@@ -13,13 +13,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true"
+             android:drawableLeft="@drawable/mobile"
+            android:gravity="center_vertical"
             android:text="超级微信"
-            android:textColor="@color/black_deep"
             android:textSize="30dp"
-            android:gravity="center"
-            android:drawableLeft="@drawable/mobile" />
+            android:textColor="#000"
+            android:layout_centerInParent="true"
+           />
     </RelativeLayout>
 
     <RelativeLayout
@@ -128,18 +128,16 @@
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="设置服务器IP地址"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:textSize="22dp"
-                android:textColor="@color/black_deep"/>
-
     </RelativeLayout>
-
-
+    <Button
+        android:id="@+id/tvIp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="设置服务器的IP地址"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"/>
 
 </LinearLayout>

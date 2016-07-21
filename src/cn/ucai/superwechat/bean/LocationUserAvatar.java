@@ -2,7 +2,7 @@ package cn.ucai.superwechat.bean;
 
 import java.io.Serializable;
 
-public class LocationUserAvatar extends UserAvatar implements Serializable{
+public class LocationUserAvatar extends UserAvatar implements Serializable {
 	private Integer mlocationId;
 //	private String mlocationUserName;
 	private Double mlocationLatitude;
